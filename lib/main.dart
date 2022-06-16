@@ -18,6 +18,10 @@ class MyApp extends StatelessWidget {
       title: "classified_app",
       theme: ThemeData(
         primarySwatch: Colors.purple,
+        fontFamily: "kalpurush",
+        textTheme: TextTheme(
+          headline1: TextStyle(fontFamily: "Alinur"),
+        ),
       ),
       home: IndexPage(),
     );

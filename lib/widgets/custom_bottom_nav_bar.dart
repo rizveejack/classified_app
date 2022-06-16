@@ -59,7 +59,7 @@ class CustomBottomNavBar extends StatelessWidget {
               iconSize: 28,
               icon: Icon(
                 Icons.headset_mic_rounded,
-                color: currentIndex == 3 ? Colors.deepOrange : Colors.black54,
+                color: currentIndex == 3 ? Colors.brown : Colors.black54,
               ),
               onPressed: () {
                 changeIndex(3);

@@ -1,8 +1,7 @@
-// ignore_for_file: non_constant_identifier_names, prefer_const_constructors
-
 import 'package:flutter/material.dart';
 
-import '../widgets/custom_bottom_nav_bar.dart';
+import '../widgets/widgets.dart';
+import 'screens.dart';
 
 class IndexPage extends StatefulWidget {
   const IndexPage({Key? key}) : super(key: key);
@@ -13,11 +12,7 @@ class IndexPage extends StatefulWidget {
 
 class _IndexPageState extends State<IndexPage> {
   final _screens = <Widget>[
-    Container(
-      child: Center(
-        child: Text("index0"),
-      ),
-    ),
+    HomeScreen(),
     Container(
       child: Center(
         child: Text("index1"),
