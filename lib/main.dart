@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "kalpurush",
         visualDensity: VisualDensity.adaptivePlatformDensity,
         textTheme: TextTheme(
-          headline4: TextStyle(fontFamily: "Alinur"),
+          headline4: TextStyle(fontFamily: "Alinur", color: Colors.black54),
           headline5: TextStyle(fontFamily: "Alinur", color: Colors.black54),
           bodyText1: TextStyle(fontSize: 17.00),
           bodyText2: TextStyle(fontSize: 17.00),

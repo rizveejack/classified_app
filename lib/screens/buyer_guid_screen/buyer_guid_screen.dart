@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../pallets.dart';
+
 class BuyerGuidScreen extends StatelessWidget {
   const BuyerGuidScreen({Key? key}) : super(key: key);
 
@@ -9,17 +11,17 @@ class BuyerGuidScreen extends StatelessWidget {
     return SingleChildScrollView(
       child: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(Pallets.defaultPadding),
           child: Column(
             children: [
               SizedBox(
                 height: 250,
                 child: SvgPicture.asset(
                   "assets/images/sequrity.svg",
-                  fit: BoxFit.fitHeight,
+                  fit: BoxFit.fitWidth,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Text(
@@ -30,12 +32,13 @@ class BuyerGuidScreen extends StatelessWidget {
                 "Bikroy এ, আমাদের প্ল্যাটফর্মে যতটা সম্ভব আপনার নিরাপদ অভিজ্ঞতা নিশ্চিত করার জন্য আমরা ১০০% প্রতিশ্রুতিবদ্ধ।Bikroy এ কেনাবেচা করার সময় কীভাবে নিরাপদ থাকা যায় সে সংক্রান্ত কিছু পরামর্শ এখানে দেওয়া হলো।",
               ),
               const SizedBox(
-                height: 20,
+                height: 40,
                 child: Divider(),
               ),
               const _SequrityHeadinge(
                 title: "সাধারণ নিরাপত্তামূলক পরামর্শ",
                 icon: Icons.lock,
+                color: Colors.blueGrey,
               ),
               const _SequrityCard(
                 title: "স্থানীয় পণ্য রাখুন",
@@ -62,9 +65,13 @@ class BuyerGuidScreen extends StatelessWidget {
                 body:
                     "এর মধ্যে রয়েছে ব্যাংক অ্যাকাউন্টের বিবরণ, পেপ্যাল ​​তথ্য এবং অন্য কোনো তথ্য যার অপব্যবহার হতে পারে।",
               ),
-              _SequrityHeadinge(
+              const SizedBox(
+                height: 40,
+              ),
+              const _SequrityHeadinge(
                 title: "স্ক্যাম ও প্রতারণা থেকে সতর্ক থাকতে হবে",
                 icon: Icons.warning,
+                color: Colors.redAccent,
               ),
               const _SequrityCard(
                 title: "জাল পেমেন্ট সার্ভিসসমূহ",
@@ -87,9 +94,13 @@ class BuyerGuidScreen extends StatelessWidget {
                 body:
                     "এই সার্ভিসগুলো অপরিচিতদের মধ্যে লেনদেনের জন্য নয় এবং তাদের মাধ্যমে অনেক স্প্যাম চালানো হয়। এই সার্ভিসগুলো ব্যবহারের অনুরোধ এড়িয়ে চলুন।",
               ),
+              const SizedBox(
+                height: 40,
+              ),
               const _SequrityHeadinge(
                 title: "Bikroy দ্বারা প্রদত্ত নিরাপত্তা ব্যবস্থা",
-                icon: Icons.warning_amber_rounded,
+                icon: Icons.shield_rounded,
+                color: Colors.green,
               ),
               const _SequrityCard(
                 title: "আপনার বিজ্ঞাপনে ইমেইল অ্যাড্রেস দেখা যায় না",
@@ -110,9 +121,13 @@ class BuyerGuidScreen extends StatelessWidget {
                 body:
                     "আমরা সন্দেহজনক বা অবৈধ কার্যকলাপের রিপোর্ট ট্র্যাক করি যাতে অপরাধীরা আবার সাইট ব্যবহার করতে না পারে।",
               ),
+              const SizedBox(
+                height: 40,
+              ),
               const _SequrityHeadinge(
                 title: "একটি নিরাপত্তা সমস্যা রিপোর্ট করা",
-                icon: Icons.warning_amber_rounded,
+                icon: Icons.bug_report,
+                color: Colors.orangeAccent,
               ),
               const _SequrityCard(
                 title: "স্ক্যামের শিকার?",
@@ -138,10 +153,12 @@ class _SequrityHeadinge extends StatelessWidget {
     Key? key,
     required this.title,
     required this.icon,
+    required this.color,
   }) : super(key: key);
 
   final String title;
   final IconData icon;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -152,13 +169,11 @@ class _SequrityHeadinge extends StatelessWidget {
           Icon(
             icon,
             size: 50.00,
-            color: Colors.amber,
+            color: color,
             shadows: const [
               Shadow(
-                blurRadius: 0.9,
-                color: Colors.black45,
-                // ignore: unnecessary_const
-                offset: Offset(0.1, 0.1),
+                blurRadius: 9,
+                color: Colors.black38,
               ),
             ],
           ),

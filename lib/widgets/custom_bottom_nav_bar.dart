@@ -28,7 +28,13 @@ class CustomBottomNavBar extends StatelessWidget {
               iconSize: 28,
               icon: Icon(
                 Icons.widgets_rounded,
-                color: currentIndex == 0 ? Colors.purple : Colors.black54,
+                color: currentIndex == 0 ? Colors.orange : Colors.black54,
+                shadows: const [
+                  Shadow(
+                    blurRadius: 9,
+                    color: Colors.black26,
+                  ),
+                ],
               ),
               onPressed: () {
                 changeIndex(0);
@@ -39,6 +45,12 @@ class CustomBottomNavBar extends StatelessWidget {
               icon: Icon(
                 Icons.local_fire_department_rounded,
                 color: currentIndex == 1 ? Colors.redAccent : Colors.black54,
+                shadows: const [
+                  Shadow(
+                    blurRadius: 9,
+                    color: Colors.black26,
+                  ),
+                ],
               ),
               onPressed: () {
                 changeIndex(1);
@@ -50,6 +62,12 @@ class CustomBottomNavBar extends StatelessWidget {
               icon: Icon(
                 Icons.shield_rounded,
                 color: currentIndex == 2 ? Colors.green : Colors.black54,
+                shadows: const [
+                  Shadow(
+                    blurRadius: 9,
+                    color: Colors.black26,
+                  ),
+                ],
               ),
               onPressed: () {
                 changeIndex(2);
@@ -59,7 +77,13 @@ class CustomBottomNavBar extends StatelessWidget {
               iconSize: 28,
               icon: Icon(
                 Icons.headset_mic_rounded,
-                color: currentIndex == 3 ? Colors.brown : Colors.black54,
+                color: currentIndex == 3 ? Colors.blueGrey : Colors.black54,
+                shadows: const [
+                  Shadow(
+                    blurRadius: 9,
+                    color: Colors.black26,
+                  ),
+                ],
               ),
               onPressed: () {
                 changeIndex(3);
