@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "classified_app",
       theme: ThemeData(
-        primarySwatch: Colors.purple,
+        primarySwatch: Colors.blue,
         fontFamily: "kalpurush",
         visualDensity: VisualDensity.adaptivePlatformDensity,
         textTheme: TextTheme(
