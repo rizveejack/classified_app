@@ -19,8 +19,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple,
         fontFamily: "kalpurush",
+        visualDensity: VisualDensity.adaptivePlatformDensity,
         textTheme: TextTheme(
-          headline1: TextStyle(fontFamily: "Alinur"),
+          headline4: TextStyle(fontFamily: "Alinur"),
+          headline5: TextStyle(fontFamily: "Alinur", color: Colors.black54),
+          bodyText1: TextStyle(fontSize: 17.00),
+          bodyText2: TextStyle(fontSize: 17.00),
         ),
       ),
       home: IndexPage(),

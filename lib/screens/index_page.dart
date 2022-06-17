@@ -11,26 +11,15 @@ class IndexPage extends StatefulWidget {
 }
 
 class _IndexPageState extends State<IndexPage> {
+  int _currentIndex = 0;
+
   final _screens = <Widget>[
-    HomeScreen(),
-    Container(
-      child: Center(
-        child: Text("index1"),
-      ),
-    ),
-    Container(
-      child: Center(
-        child: Text("index2"),
-      ),
-    ),
-    Container(
-      child: Center(
-        child: Text("index3"),
-      ),
-    ),
+    const HomeScreen(),
+    const TrandScreen(),
+    const BuyerGuidScreen(),
+    const SupportScreen(),
   ];
 
-  int _currentIndex = 0;
   void _onTab(int index) {
     setState(() {
       _currentIndex = index;
@@ -40,12 +29,11 @@ class _IndexPageState extends State<IndexPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBody: true,
       bottomNavigationBar:
           CustomBottomNavBar(currentIndex: _currentIndex, onTab: _onTab),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: _screens[_currentIndex],
