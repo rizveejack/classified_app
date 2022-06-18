@@ -5,7 +5,18 @@ import '../pallets.dart';
 class ProductCard extends StatelessWidget {
   const ProductCard({
     Key? key,
+    required this.title,
+    required this.image,
+    required this.verified,
+    required this.location,
+    required this.date,
   }) : super(key: key);
+
+  final String title;
+  final String image;
+  final bool verified;
+  final String location;
+  final String date;
 
   @override
   Widget build(BuildContext context) {
@@ -32,8 +43,8 @@ class ProductCard extends StatelessWidget {
                 width: 100,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(6),
-                  image: const DecorationImage(
-                    image: AssetImage("assets/images/product.jpg"),
+                  image: DecorationImage(
+                    image: AssetImage(image),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -44,8 +55,8 @@ class ProductCard extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        const Text(
-                          "সারা বাংলাদেশের ক্রয়, ভাড়া কিংবা বিক্রি করুন যেকোনো কিছু",
+                        Text(
+                          title,
                           overflow: TextOverflow.ellipsis,
                           maxLines: 2,
                           // ignore: unnecessary_const
@@ -60,7 +71,9 @@ class ProductCard extends StatelessWidget {
                           children: [
                             Icon(
                               Icons.shield_rounded,
-                              color: Colors.green.shade600,
+                              color: verified
+                                  ? Colors.green.shade600
+                                  : Colors.grey.shade600,
                               size: 16,
                               shadows: const [
                                 Shadow(
@@ -69,10 +82,12 @@ class ProductCard extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            SizedBox(width: 5),
-                            const Text(
-                              "বিশ্বস্ত বিক্রেতা",
-                              style: TextStyle(
+                            const SizedBox(width: 5),
+                            Text(
+                              verified
+                                  ? "বিশ্বস্ত বিক্রেতা"
+                                  : "সাধারণ বিক্রেতা",
+                              style: const TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -92,10 +107,10 @@ class ProductCard extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            SizedBox(width: 5),
-                            const Text(
-                              "চুয়াডাঙ্গা সদর",
-                              style: TextStyle(
+                            const SizedBox(width: 5),
+                            Text(
+                              location,
+                              style: const TextStyle(
                                 fontSize: 14,
                               ),
                             ),
@@ -108,13 +123,13 @@ class ProductCard extends StatelessWidget {
                       right: 0,
                       child: Row(
                         children: [
-                          Icon(
+                          const Icon(
                             Icons.access_time_rounded,
                             size: 10,
                           ),
-                          SizedBox(width: 4),
-                          Text("পোস্ট করা হয়েছে ১৭ জুন",
-                              style: TextStyle(
+                          const SizedBox(width: 4),
+                          Text("পোস্ট করা হয়েছে $date",
+                              style: const TextStyle(
                                 fontSize: 12,
                               )),
                         ],

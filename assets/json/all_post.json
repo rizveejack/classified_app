@@ -1,0 +1,100 @@
+[
+    {
+    "id":1,
+    "image":"assets/products/product.jpg",
+    "title":"বহুকাল হইলো আমি একবার পালামৌ প্রদেশে গিয়াছিলাম",
+    "verified":true,
+    "location": "চুয়াডাঙ্গা সদর",
+    "date":"১৭ জুন"
+    },
+    {
+    "id":2,
+    "image":"assets/products/product1.jpg",
+    "title":"মহাকায় জন্তু ছিল প্রকাণ্ড একলা, মানুষ হল দূরপ্রসারিত অনেক।",
+    "verified":false,
+    "location": "মেহেরপুর সদর",
+    "date":"১ জুন"
+    
+    },
+    {
+    "id":3,
+    "image":"assets/products/product2.jpg",
+    "title":"এবারকার জীবযাত্রার পালায় বিপুলতাকে করা হল বহুলতায় পরিণত।",
+    "verified":true,
+    "location": "ঝিনাইদহ সদর",
+    "date":"১৯ জুন"
+    },
+    {
+    "id":4,
+    "image":"assets/products/product4.jpg",
+    "title":"মানুষকে দেখতে হল খুব ছোটো, কিন্তু সেটা একটা কৌশল মাত্র।",
+    "verified":true,
+    "location": "কুষ্টিয়া সদর",
+    "date":"১৭ জুন"
+    },
+    {
+    "id":5,
+    "image":"assets/products/product5.jpg",
+    "title":"নূতন পর্বে প্রকৃতি যথাসম্ভব মানুষের বরাদ্দ কম করে দিয়ে নিজে রইল নেপথ্যে।",
+    "verified":false,
+    "location": "মেহেরপুর সদর",
+    "date":"১৯ জুন"
+    },
+    {
+    "id":6,
+    "image":"assets/products/product6.jpg",
+    "title":"পরীক্ষায় এটাও স্থির হয়ে গেল যে, প্রশ্রয়ের পরিমাণ যত বেশি হয় দুর্বলতার বোঝাও তত দুর্বহ হয়ে ওঠে।",
+    "verified":false,
+    "location": "চুয়াডাঙ্গা সদর",
+    "date":"১৭ জুন"
+    },
+    {
+    "id":7,
+    "image":"assets/products/product7.jpg",
+    "title":" সেকালের হরকরা নামক ইংরেজি পত্রিকায় দেখিতাম",
+    "verified":true,
+    "location": "ঝিনাইদহ সদর",
+    "date":"২১ জুন"
+    },
+    {
+    "id":8,
+    "image":"assets/products/product8.jpg",
+    "title":"মানুষ আসবার পূর্বেই জীবসৃষ্টিযজ্ঞে প্রকৃতির ভূরিব্যয়ের পালা শেষ হয়ে এসেছে।",
+    "verified":false,
+    "location": "কুষ্টিয়া সদর",
+    "date":"১৭ জুন"
+    },
+    {
+    "id":9,
+    "image":"assets/products/product9.jpg",
+    "title":"জীবরঙ্গভূমিতে মানুষ এসে দেখা দেয় দুই শূন্য হাতে মুঠো বেঁধে।",
+    "verified":true,
+    "location": "মেহেরপুর সদর",
+    "date":"২৩ জুন"
+    },
+    {
+    "id":10,
+    "image":"assets/products/product10.jpg",
+    "title":"বাঘ ভালুক তার জীবনযাত্রার পনেরো- আনা মূলধন নিয়ে আসে প্রকৃতির মালখানা থেকে।",
+    "verified":false,
+    "location": "কুষ্টিয়া সদর",
+    "date":"২৬ জুন"
+    },
+    {
+    "id":11,
+    "image":"assets/products/product1.jpg",
+    "title":"জীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করে।",
+    "verified":false,
+    "location": "ঝিনাইদহ সদর",
+    "date":"২০ জুন"
+    },
+    {
+    "id":12,
+    "image":"assets/products/product2.jpg",
+    "title":"আয়রে ভোলা খেয়াল-খোলা , স্বপনদোলা নাচিয়ে আয় , আয়রে পাগল আবোল তাবোল",
+    "verified":false,
+    "location": "মেহেরপুর সদর",
+    "date":"১৮ জুন"
+    }
+    
+]

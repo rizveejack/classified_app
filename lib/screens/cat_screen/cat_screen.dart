@@ -26,7 +26,13 @@ class CatScreen extends StatelessWidget {
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (_, index) {
-                  return const ProductCard();
+                  return const ProductCard(
+                    title: "বহুকাল হইলো আমি একবার পালামৌ প্রদেশে গিয়াছিলাম",
+                    image: "assets/products/product2.jpg",
+                    verified: false,
+                    location: "ঝিনাইদহ সদর",
+                    date: "১৯ জুন",
+                  );
                 },
               ),
             ],

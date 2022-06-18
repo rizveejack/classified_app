@@ -1,0 +1,63 @@
+[
+    {
+    "id":1,
+    "image":"assets/icons/accessories.png",
+    "title":"যন্ত্রপাতি"
+    },
+    {
+    "id":2,
+    "image":"assets/icons/apartment.png",
+    "title":"বাসাবাড়ি"
+    },
+    {
+    "id":3,
+    "image":"assets/icons/bike.png",
+    "title":"বাইক"
+    },
+    {
+    "id":4,
+    "image":"assets/icons/cloths.png",
+    "title":"পোষাক"
+    },
+    {
+    "id":5,
+    "image":"assets/icons/compuer-accessories.png",
+    "title":"কম্পিউটার যন্ত্রাংশ"
+    },
+    {
+    "id":6,
+    "image":"assets/icons/cosmetics.png",
+    "title":"প্রসাধনী"
+    },
+    {
+    "id":7,
+    "image":"assets/icons/foods.png",
+    "title":"খাবার"
+    },
+    {
+    "id":8,
+    "image":"assets/icons/kitchen.png",
+    "title":"রান্নাঘর"
+    },
+    {
+    "id":9,
+    "image":"assets/icons/laptop.png",
+    "title":"ল্যাপটপ"
+    },
+    {
+    "id":10,
+    "image":"assets/icons/mobile-accessories.png",
+    "title":"মোবাইল যন্ত্রাংশ"
+    },
+    {
+    "id":11,
+    "image":"assets/icons/mobile.png",
+    "title":"মোবাইল"
+    },
+    {
+    "id":12,
+    "image":"assets/icons/pets.png",
+    "title":"পোষা প্রাণী"
+    }
+    
+]
