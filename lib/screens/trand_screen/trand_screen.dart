@@ -1,10 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
+import '../../models/models.dart';
 import '../../pallets.dart';
 import '../../widgets/widgets.dart';
 
-class TrandScreen extends StatelessWidget {
+class TrandScreen extends StatefulWidget {
   const TrandScreen({Key? key}) : super(key: key);
+
+  @override
+  State<TrandScreen> createState() => _TrandScreenState();
+}
+
+class _TrandScreenState extends State<TrandScreen> {
+  List<PostModel> _postData = [];
+
+  Future _fetchData() async {
+    final String res = await rootBundle.loadString('assets/json/all_post.json');
+    final postModel = postModelFromJson(res);
+    setState(() {
+      _postData = postModel;
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _fetchData();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,17 +44,17 @@ class TrandScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               ListView.builder(
-                itemCount: 20,
+                itemCount: _postData.length,
                 scrollDirection: Axis.vertical,
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (_, index) {
-                  return const ProductCard(
-                    title: "বহুকাল হইলো আমি একবার পালামৌ প্রদেশে গিয়াছিলাম",
-                    image: "assets/products/product2.jpg",
-                    verified: false,
-                    location: "ঝিনাইদহ সদর",
-                    date: "১৯ জুন",
+                  return ProductCard(
+                    title: _postData[index].title,
+                    image: _postData[index].image,
+                    verified: _postData[index].verified,
+                    location: _postData[index].location,
+                    date: _postData[index].date ?? "",
                   );
                 },
               ),

@@ -22,7 +22,7 @@
     {
     "id":5,
     "image":"assets/icons/compuer-accessories.png",
-    "title":"কম্পিউটার যন্ত্রাংশ"
+    "title":"কম্পিউটার"
     },
     {
     "id":6,
@@ -47,7 +47,7 @@
     {
     "id":10,
     "image":"assets/icons/mobile-accessories.png",
-    "title":"মোবাইল যন্ত্রাংশ"
+    "title":"ফোন পার্টস"
     },
     {
     "id":11,

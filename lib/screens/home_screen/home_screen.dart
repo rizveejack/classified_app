@@ -1,8 +1,33 @@
+import 'package:classified_app/models/models.dart';
 import 'package:classified_app/pallets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-class HomeScreen extends StatelessWidget {
+import '../../widgets/widgets.dart';
+
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  List<CategoryModel> _listCategory = [];
+
+  Future<void> _fetchCategory() async {
+    final resquest = await rootBundle.loadString("assets/json/category.json");
+    final categoryModel = categoryModelFromJson(resquest);
+    setState(() {
+      _listCategory = categoryModel;
+    });
+  }
+
+  @override
+  void initState() {
+    _fetchCategory();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -14,15 +39,7 @@ class HomeScreen extends StatelessWidget {
             width: double.maxFinite,
             height: 200,
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [
-                  Colors.blue.shade500,
-                  Colors.blue.shade800,
-                  Colors.blue.shade400,
-                ],
-              ),
+              gradient: Pallets.homepageGradient,
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -97,26 +114,11 @@ class HomeScreen extends StatelessWidget {
                     crossAxisSpacing: 15,
                     childAspectRatio: 3 / 5,
                   ),
-                  itemCount: 12,
+                  itemCount: _listCategory.length,
                   itemBuilder: (_, index) {
-                    return Column(
-                      children: [
-                        CircleAvatar(
-                          radius: 45,
-                          backgroundColor: Colors.grey.withOpacity(0.2),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Image.asset("assets/icons/bike.png"),
-                          ),
-                        ),
-                        const Text(
-                          "সিডি বাজার",
-                          style: TextStyle(
-                            fontSize: 13.00,
-                            height: 0.1,
-                          ),
-                        ),
-                      ],
+                    return CategoryCard(
+                      image: _listCategory[index].image,
+                      title: _listCategory[index].title,
                     );
                   },
                 ),
