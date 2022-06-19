@@ -5,6 +5,27 @@ class DashBordScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+      ),
+      drawer: Drawer(
+        width: 200,
+        child: ListView(
+          children: [
+            DrawerHeader(
+              child: Text("header"),
+            ),
+            ListTile(
+              title: Text("Profile"),
+              leading: Icon(
+                Icons.person_rounded,
+              ),
+            ),
+          ],
+        ),
+      ),
+      body: Text("Dashbord"),
+    );
   }
 }
