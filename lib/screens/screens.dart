@@ -1,3 +1,4 @@
+export 'all_category/all_category_screen.dart';
 export 'auth_screen/auth_screen.dart';
 export 'buyer_guid_screen/buyer_guid_screen.dart';
 export 'cat_screen/cat_screen.dart';

@@ -3,6 +3,7 @@ import 'package:classified_app/pallets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '/screens/screens.dart';
 import '../../widgets/widgets.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -121,6 +122,57 @@ class _HomeScreenState extends State<HomeScreen> {
                       title: _listCategory[index].title,
                     );
                   },
+                ),
+              ),
+              const SizedBox(height: 40),
+              Text(
+                "প্রয়োজনীয় লিংক",
+                style: TextStyle(
+                  fontFamily: Theme.of(context).textTheme.headline5?.fontFamily,
+                  fontSize: 25.00,
+                ),
+              ),
+              SizedBox(
+                height: 30,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) {
+                            return const SupportScreen();
+                          }),
+                        );
+                      },
+                      child: const Text("যোগাযোগ"),
+                    ),
+                    const VerticalDivider(width: 2),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) {
+                            return const BuyerGuidScreen();
+                          }),
+                        );
+                      },
+                      child: const Text("নিরাপদ থাকুন"),
+                    ),
+                    const VerticalDivider(width: 2),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) {
+                            return const PolicyScreen();
+                          }),
+                        );
+                      },
+                      child: const Text("আমাদের পলিসি"),
+                    ),
+                  ],
                 ),
               ),
             ],

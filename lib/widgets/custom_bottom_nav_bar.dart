@@ -17,7 +17,7 @@ class CustomBottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
-      shape: CircularNotchedRectangle(),
+      shape: const CircularNotchedRectangle(),
       notchMargin: 5,
       child: Padding(
         padding: const EdgeInsets.all(5.0),
@@ -56,12 +56,12 @@ class CustomBottomNavBar extends StatelessWidget {
                 changeIndex(1);
               },
             ),
-            SizedBox(width: 25),
+            const SizedBox(width: 25),
             IconButton(
               iconSize: 28,
               icon: Icon(
-                Icons.shield_rounded,
-                color: currentIndex == 2 ? Colors.green : Colors.black54,
+                Icons.category_rounded,
+                color: currentIndex == 2 ? Colors.purple : Colors.black54,
                 shadows: const [
                   Shadow(
                     blurRadius: 9,
@@ -76,7 +76,7 @@ class CustomBottomNavBar extends StatelessWidget {
             IconButton(
               iconSize: 28,
               icon: Icon(
-                Icons.headset_mic_rounded,
+                Icons.person_rounded,
                 color: currentIndex == 3 ? Colors.blueGrey : Colors.black54,
                 shadows: const [
                   Shadow(

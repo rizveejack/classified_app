@@ -16,8 +16,8 @@ class _IndexPageState extends State<IndexPage> {
   final _screens = <Widget>[
     const HomeScreen(),
     const TrandScreen(),
-    const BuyerGuidScreen(),
-    const SupportScreen(),
+    const AllCatScreen(),
+    const DashBordScreen(),
   ];
 
   void _onTab(int index) {
@@ -36,7 +36,7 @@ class _IndexPageState extends State<IndexPage> {
           Navigator.push(
             context,
             MaterialPageRoute(builder: (_) {
-              return AuthScreen();
+              return const AuthScreen();
             }),
           );
         },
