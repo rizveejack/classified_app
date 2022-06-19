@@ -1,43 +1,66 @@
+import 'package:classified_app/models/models.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../../pallets.dart';
 import '../../widgets/widgets.dart';
 
-class CatScreen extends StatelessWidget {
+class CatScreen extends StatefulWidget {
   const CatScreen({Key? key}) : super(key: key);
 
   @override
+  State<CatScreen> createState() => _CatScreenState();
+}
+
+class _CatScreenState extends State<CatScreen> {
+  List<PostModel> _allCatproducts = [];
+
+  Future<void> _fetchCategory() async {
+    final responce = await rootBundle.loadString("assets/json/all_post.json");
+    final postModel = postModelFromJson(responce);
+    setState(() {
+      _allCatproducts = postModel;
+    });
+  }
+
+  @override
+  void initState() {
+    _fetchCategory();
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.all(Pallets.defaultPadding),
-          child: Column(
-            children: [
-              const ScreenHeading(
-                title: "ট্রেন্ডিং প্রোডাক্টস",
-                icon: Icons.local_fire_department_rounded,
-                iconColor: Colors.redAccent,
-              ),
-              const SizedBox(height: 20),
-              ListView.builder(
-                itemCount: 20,
-                scrollDirection: Axis.vertical,
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                itemBuilder: (_, index) {
-                  return const ProductCard(
-                    title: "বহুকাল হইলো আমি একবার পালামৌ প্রদেশে গিয়াছিলাম",
-                    image: "assets/products/product2.jpg",
-                    verified: false,
-                    location: "ঝিনাইদহ সদর",
-                    date: "১৯ জুন",
+    return Scaffold(
+      body: CustomScrollView(
+        slivers: [
+          SliverAppBar(
+            toolbarHeight: Pallets.toolbarHeight,
+            centerTitle: false,
+            title: const ScreenHeading(
+              title: "সকল ক্যাটেগরি নাম প্রোডাক্টস",
+              icon: Icons.local_fire_department_rounded,
+              iconColor: Colors.redAccent,
+            ),
+          ),
+          SliverPadding(
+            padding: EdgeInsets.symmetric(horizontal: Pallets.defaultPadding),
+            sliver: SliverList(
+              delegate: SliverChildBuilderDelegate(
+                childCount: _allCatproducts.length,
+                (_, index) {
+                  return ProductCard(
+                    title: _allCatproducts[index].title,
+                    image: _allCatproducts[index].image,
+                    verified: _allCatproducts[index].verified,
+                    location: _allCatproducts[index].location,
+                    date: _allCatproducts[index].date!,
                   );
                 },
               ),
-            ],
+            ),
           ),
-        ),
+        ],
       ),
     );
   }
