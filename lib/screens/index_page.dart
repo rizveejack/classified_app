@@ -32,7 +32,14 @@ class _IndexPageState extends State<IndexPage> {
       bottomNavigationBar:
           CustomBottomNavBar(currentIndex: _currentIndex, onTab: _onTab),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) {
+              return AuthScreen();
+            }),
+          );
+        },
         child: const Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
