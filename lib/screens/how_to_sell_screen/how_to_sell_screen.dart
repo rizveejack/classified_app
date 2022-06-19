@@ -3,13 +3,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../pallets.dart';
 
-class AllCatScreen extends StatelessWidget {
-  const AllCatScreen({Key? key}) : super(key: key);
+class HowToSellScreen extends StatelessWidget {
+  const HowToSellScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(elevation: 0),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(

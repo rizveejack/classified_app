@@ -38,7 +38,7 @@ class _CatScreenState extends State<CatScreen> {
             toolbarHeight: Pallets.toolbarHeight,
             centerTitle: false,
             title: const ScreenHeading(
-              title: "সকল ক্যাটেগরি নাম প্রোডাক্টস",
+              title: "সকল প্রোডাক্টস",
               icon: Icons.local_fire_department_rounded,
               iconColor: Colors.redAccent,
             ),
