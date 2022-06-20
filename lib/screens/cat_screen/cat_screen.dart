@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 
 import '../../pallets.dart';
 import '../../widgets/widgets.dart';
+import '../screens.dart';
 
 class CatScreen extends StatefulWidget {
   const CatScreen({Key? key}) : super(key: key);
@@ -50,6 +51,14 @@ class _CatScreenState extends State<CatScreen> {
                 childCount: _allCatproducts.length,
                 (_, index) {
                   return ProductCard(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (_) {
+                          return const SingleAddScreen();
+                        }),
+                      );
+                    },
                     title: _allCatproducts[index].title,
                     image: _allCatproducts[index].image,
                     verified: _allCatproducts[index].verified,

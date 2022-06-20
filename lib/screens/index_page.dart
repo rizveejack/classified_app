@@ -30,6 +30,7 @@ class _IndexPageState extends State<IndexPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       bottomNavigationBar:
           CustomBottomNavBar(currentIndex: _currentIndex, onTab: _onTab),
       floatingActionButton: FloatingActionButton(
@@ -37,7 +38,7 @@ class _IndexPageState extends State<IndexPage> {
           Navigator.push(
             context,
             MaterialPageRoute(builder: (_) {
-              return const AuthScreen();
+              return const PostAdsScreen();
             }),
           );
         },

@@ -60,7 +60,7 @@ class CustomBottomNavBar extends StatelessWidget {
             IconButton(
               iconSize: 28,
               icon: Icon(
-                Icons.category_rounded,
+                Icons.campaign_rounded,
                 color: currentIndex == 2 ? Colors.purple : Colors.black54,
                 shadows: const [
                   Shadow(
@@ -88,7 +88,7 @@ class CustomBottomNavBar extends StatelessWidget {
               onPressed: () {
                 changeIndex(3);
               },
-            )
+            ),
           ],
         ),
       ),

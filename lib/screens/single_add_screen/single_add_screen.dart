@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class PostAdsScreen extends StatelessWidget {
-  const PostAdsScreen({Key? key}) : super(key: key);
+class SingleAddScreen extends StatelessWidget {
+  const SingleAddScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +10,7 @@ class PostAdsScreen extends StatelessWidget {
         elevation: 0,
       ),
       body: Center(
-        child: Text("অ্যাড পোস্ট করুন"),
+        child: Text("সিঙ্গেল অ্যাড পেজ"),
       ),
     );
   }

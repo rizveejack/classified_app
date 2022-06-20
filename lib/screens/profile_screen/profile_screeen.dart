@@ -5,6 +5,13 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+      ),
+      body: Center(
+        child: Text("প্রোফাইল এডিট করুন "),
+      ),
+    );
   }
 }

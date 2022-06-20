@@ -9,5 +9,6 @@ export 'policy_screen/policy_screen.dart';
 export 'post_a_add_screen/post_a_add_screen.dart';
 export 'profile_screen/profile_screeen.dart';
 export 'search_screen/search_screen.dart';
+export 'single_add_screen/single_add_screen.dart';
 export 'support_screeen/support_screen.dart';
 export 'trand_screen/trand_screen.dart';

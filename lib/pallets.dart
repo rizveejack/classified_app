@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Pallets {
-  static double defaultPadding = 20.00;
+  static double defaultPadding = 10.00;
   static double toolbarHeight = 80.00;
   static LinearGradient homepageGradient = LinearGradient(
     begin: Alignment.topLeft,

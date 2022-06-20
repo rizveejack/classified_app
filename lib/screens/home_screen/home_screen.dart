@@ -125,7 +125,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   },
                 ),
               ),
-              const SizedBox(height: 40),
               Text(
                 "প্রয়োজনীয় লিংক",
                 style: TextStyle(
@@ -178,7 +177,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ],
           ),
-          const SizedBox(height: 30),
+          const SizedBox(height: 100),
         ],
       ),
     );
