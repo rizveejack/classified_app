@@ -66,56 +66,33 @@ class ProductCard extends StatelessWidget {
                             // ignore: unnecessary_const
                             style: const TextStyle(
                               fontWeight: FontWeight.bold,
+                              color: Colors.black87,
                               fontSize: 15.00,
-                              height: 1.2,
+                              height: 1.5,
                             ),
                           ),
-                          const SizedBox(height: 10),
+                          const SizedBox(height: 4),
                           Row(
-                            children: [
-                              Icon(
-                                Icons.shield_rounded,
-                                color: verified
-                                    ? Colors.green.shade600
-                                    : Colors.grey.shade600,
-                                size: 16,
-                                shadows: const [
-                                  Shadow(
-                                    blurRadius: 4,
-                                    color: Colors.black26,
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(width: 5),
+                            children: const [
                               Text(
-                                verified
-                                    ? "বিশ্বস্ত বিক্রেতা"
-                                    : "সাধারণ বিক্রেতা",
-                                style: const TextStyle(
-                                  fontSize: 12,
+                                "মূল্য:",
+                                style: TextStyle(
+                                  fontSize: 14,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.location_on_rounded,
-                                color: Colors.blueGrey.shade600,
-                                size: 16,
-                                shadows: const [
-                                  Shadow(
-                                    blurRadius: 4,
-                                    color: Colors.black26,
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(width: 5),
+                              SizedBox(width: 5),
                               Text(
-                                location,
-                                style: const TextStyle(
-                                  fontSize: 14,
+                                "৫৭০.০০",
+                                style: TextStyle(
+                                  fontSize: 21,
+                                ),
+                              ),
+                              Text(
+                                "৳",
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ],
@@ -124,18 +101,57 @@ class ProductCard extends StatelessWidget {
                       ),
                       Positioned(
                         bottom: 0,
-                        right: 0,
+                        left: 0,
                         child: Row(
                           children: [
-                            const Icon(
-                              Icons.access_time_rounded,
-                              size: 10,
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.shield_rounded,
+                                  color: verified
+                                      ? Colors.green.shade600
+                                      : Colors.grey.shade600,
+                                  size: 16,
+                                  shadows: const [
+                                    Shadow(
+                                      blurRadius: 4,
+                                      color: Colors.black26,
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(width: 3),
+                                Text(
+                                  verified ? "বিশ্বস্ত" : "সাধারণ",
+                                  style: const TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
                             ),
-                            const SizedBox(width: 4),
-                            Text("পোস্ট করা হয়েছে $date",
-                                style: const TextStyle(
-                                  fontSize: 12,
-                                )),
+                            const SizedBox(width: 6),
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.location_on_rounded,
+                                  color: Colors.blueGrey.shade600,
+                                  size: 16,
+                                  shadows: const [
+                                    Shadow(
+                                      blurRadius: 4,
+                                      color: Colors.black26,
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(width: 3),
+                                Text(
+                                  location,
+                                  style: const TextStyle(
+                                    fontSize: 14,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ],
                         ),
                       ),
