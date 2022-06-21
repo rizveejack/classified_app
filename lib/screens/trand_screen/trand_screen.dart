@@ -41,6 +41,12 @@ class _TrandScreenState extends State<TrandScreen> {
             icon: Icons.local_fire_department_rounded,
             iconColor: Colors.redAccent,
           ),
+          actions: [
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.filter_list_rounded),
+            ),
+          ],
         ),
         SliverPadding(
           padding: EdgeInsets.symmetric(horizontal: Pallets.defaultPadding),

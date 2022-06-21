@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import '../screens/screens.dart';
 
@@ -15,10 +16,20 @@ class CustomDrawer extends StatelessWidget {
         padding: EdgeInsets.zero,
         shrinkWrap: true,
         children: [
-          const UserAccountsDrawerHeader(
+          UserAccountsDrawerHeader(
             decoration: BoxDecoration(color: Colors.black87),
             accountName: Text("মৌমিতা চ্যাটার্জি"),
-            accountEmail: Text("jaman@gmail.com"),
+            accountEmail: Row(
+              children: [
+                Icon(
+                  MdiIcons.whatsapp,
+                  color: Colors.green,
+                  size: 15,
+                ),
+                SizedBox(width: 5),
+                Text("+8801717656078"),
+              ],
+            ),
             currentAccountPicture: CircleAvatar(
               backgroundImage: AssetImage("assets/images/avater.jpg"),
             ),

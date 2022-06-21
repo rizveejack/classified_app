@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:classified_app/pallets.dart';
 import 'package:flutter/material.dart';
 
 import 'screens/screens.dart';
@@ -25,14 +26,14 @@ class MyApp extends StatelessWidget {
           iconTheme: IconThemeData(
               color: Theme.of(context).textTheme.bodyText1!.color),
         ),
-        primarySwatch: Colors.blue,
         fontFamily: "kalpurush",
         visualDensity: VisualDensity.adaptivePlatformDensity,
         textTheme: TextTheme(
-          headline4: TextStyle(fontFamily: "Alinur", color: Colors.black54),
-          headline5: TextStyle(fontFamily: "Alinur", color: Colors.black54),
-          bodyText1: TextStyle(fontSize: 17.00),
-          bodyText2: TextStyle(fontSize: 17.00),
+          headline4:
+              TextStyle(fontFamily: "Alinur", color: Pallets.textPrimary),
+          headline5:
+              TextStyle(fontFamily: "Alinur", color: Pallets.textPrimary),
+          bodyText2: TextStyle(fontSize: 17.00, color: Pallets.textPrimary),
         ),
       ),
       home: IndexPage(),
