@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 
 import '/screens/screens.dart';
 import '../../widgets/widgets.dart';
+import 'fetchered_product.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -94,6 +95,8 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           ),
+          const SizedBox(height: 30),
+          const FetcheredProduct(),
           const SizedBox(height: 30),
           Column(
             children: [
