@@ -9,6 +9,9 @@ class HowToSellScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+      ),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(

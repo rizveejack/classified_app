@@ -111,13 +111,13 @@ class CustomDrawer extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (_) {
-                  return const PolicyScreen();
+                  return const HowToSellScreen();
                 }),
               );
             },
             dense: true,
-            title: const Text("পলিসি"),
-            subtitle: const Text("আমাদের আপস পলিসি"),
+            title: const Text("বিক্রয় টিপস"),
+            subtitle: const Text("কিভাবে দ্রুত বিক্রি করবেন?"),
             leading: const Icon(
               Icons.assignment_rounded,
               size: 34,

@@ -96,6 +96,13 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           const SizedBox(height: 30),
+          Text(
+            "নির্বাচিত প্রোডাক্ট",
+            style: TextStyle(
+              fontFamily: Theme.of(context).textTheme.headline5?.fontFamily,
+              fontSize: 25.00,
+            ),
+          ),
           const FetcheredProduct(),
           const SizedBox(height: 30),
           Column(

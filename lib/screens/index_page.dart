@@ -1,4 +1,3 @@
-import 'package:classified_app/screens/how_to_sell_screen/how_to_sell_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/widgets.dart';
@@ -17,7 +16,7 @@ class _IndexPageState extends State<IndexPage> {
   final _screens = <Widget>[
     const HomeScreen(),
     const TrandScreen(),
-    const HowToSellScreen(),
+    const TopSellerScreen(),
     const DashBordScreen(),
   ];
 
