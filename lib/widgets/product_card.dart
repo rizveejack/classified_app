@@ -9,7 +9,6 @@ class ProductCard extends StatelessWidget {
     required this.image,
     required this.verified,
     required this.location,
-    required this.date,
     required this.onTap,
   }) : super(key: key);
 
@@ -17,7 +16,7 @@ class ProductCard extends StatelessWidget {
   final String image;
   final bool verified;
   final String location;
-  final String date;
+
   final GestureTapCallback onTap;
 
   @override

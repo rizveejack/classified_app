@@ -66,7 +66,6 @@ class _TrandScreenState extends State<TrandScreen> {
                 image: _postData[index].image,
                 verified: _postData[index].verified,
                 location: _postData[index].location,
-                date: _postData[index].date!,
               );
             }),
           ),

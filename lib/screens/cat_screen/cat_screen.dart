@@ -69,7 +69,6 @@ class _CatScreenState extends State<CatScreen> {
                     image: _allCatproducts[index].image,
                     verified: _allCatproducts[index].verified,
                     location: _allCatproducts[index].location,
-                    date: _allCatproducts[index].date!,
                   );
                 },
               ),
