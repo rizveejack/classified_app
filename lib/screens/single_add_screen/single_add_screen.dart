@@ -28,7 +28,7 @@ class SingleAddScreen extends StatelessWidget {
                     );
                   },
                   icon: Icon(
-                    MdiIcons.store,
+                    Icons.storefront_outlined,
                   ),
                 ),
                 IconButton(

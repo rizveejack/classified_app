@@ -18,12 +18,6 @@ class TopSellerScreen extends StatelessWidget {
             icon: Icons.campaign_rounded,
             iconColor: Colors.purple,
           ),
-          actions: [
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.filter_list_rounded),
-            ),
-          ],
         ),
         SliverPadding(
           padding: EdgeInsets.symmetric(horizontal: Pallets.defaultPadding),
