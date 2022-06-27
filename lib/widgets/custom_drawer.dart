@@ -61,15 +61,15 @@ class CustomDrawer extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (_) {
-                  return const SupportScreen();
+                  return const CreateShopScreen();
                 }),
               );
             },
             dense: true,
-            title: const Text("যোগাযোগ"),
-            subtitle: const Text("আমাদের সাথে যোগাযোগ করুন"),
+            title: const Text("দোকান"),
+            subtitle: const Text("দোকান তৈরী অথবা তথ্য পরিবর্তন"),
             leading: const Icon(
-              Icons.headphones_rounded,
+              Icons.storefront_rounded,
               size: 34,
               color: Colors.amber,
               shadows: [

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class RatingStar extends StatefulWidget {
   const RatingStar({Key? key}) : super(key: key);
@@ -10,17 +8,34 @@ class RatingStar extends StatefulWidget {
 }
 
 class _RatingStarState extends State<RatingStar> {
+  int _rating = 5;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: List.generate(
         5,
         (index) {
-          return IconButton(
-            padding: EdgeInsets.zero,
-            onPressed: () {},
-            icon: Icon(Icons.star),
-          );
+          if (_rating > index) {
+            return IconButton(
+              padding: EdgeInsets.zero,
+              onPressed: () {
+                setState(() {
+                  _rating = index + 1;
+                });
+              },
+              icon: Icon(Icons.star),
+            );
+          } else {
+            return IconButton(
+              padding: EdgeInsets.zero,
+              onPressed: () {
+                setState(() {
+                  _rating = index + 1;
+                });
+              },
+              icon: Icon(Icons.star_outline),
+            );
+          }
         },
       ),
     );

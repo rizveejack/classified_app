@@ -1,8 +1,8 @@
 import 'package:classified_app/pallets.dart';
 import 'package:flutter/material.dart';
 
-class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({Key? key}) : super(key: key);
+class CreateShopScreen extends StatelessWidget {
+  const CreateShopScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +54,7 @@ class ProfileScreen extends StatelessWidget {
                 ),
                 child: TextFormField(
                   decoration: const InputDecoration.collapsed(
-                    hintText: "আপনার নাম?",
+                    hintText: "আপনার ব্যাবসার নাম?",
                   ),
                 ),
               ),
@@ -67,7 +67,7 @@ class ProfileScreen extends StatelessWidget {
                 ),
                 child: TextFormField(
                   decoration: const InputDecoration.collapsed(
-                    hintText: "আপনার ফোন নম্বর?",
+                    hintText: "ব্যাবসার ফোন নম্বর?",
                   ),
                 ),
               ),
@@ -80,7 +80,7 @@ class ProfileScreen extends StatelessWidget {
                 ),
                 child: TextFormField(
                   decoration: const InputDecoration.collapsed(
-                    hintText: "আপনার হোয়াটস্যাপ নম্বর?",
+                    hintText: "ব্যাবসার হোয়াটস্যাপ নম্বর?",
                   ),
                 ),
               ),
@@ -97,9 +97,9 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {},
-                icon: const Icon(Icons.upload_file_rounded),
+                icon: const Icon(Icons.store),
                 label: const Text(
-                  "আপডেট প্রোফাইল",
+                  "দোকান তৈরী করুন",
                   style: TextStyle(
                     fontSize: 16,
                   ),

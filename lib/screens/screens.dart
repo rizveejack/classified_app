@@ -1,6 +1,7 @@
 export 'auth_screen/auth_screen.dart';
 export 'buyer_guid_screen/buyer_guid_screen.dart';
 export 'cat_screen/cat_screen.dart';
+export 'create_shop_screen/create_shop_screen.dart';
 export 'dashbord_screen/dashbord_screen.dart';
 export 'home_screen/home_screen.dart';
 export 'how_to_sell_screen/how_to_sell_screen.dart';

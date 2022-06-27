@@ -12,7 +12,7 @@ class WriteReviewScreen extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(Pallets.defaultPadding),
           child: Column(

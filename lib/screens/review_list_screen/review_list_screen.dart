@@ -35,31 +35,7 @@ class ReviewListScreen extends StatelessWidget {
                               fontSize: 17,
                             ),
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Icons.star_rounded,
-                                size: 16,
-                              ),
-                              Icon(
-                                Icons.star_rounded,
-                                size: 16,
-                              ),
-                              Icon(
-                                Icons.star_rounded,
-                                size: 16,
-                              ),
-                              Icon(
-                                Icons.star_rounded,
-                                size: 16,
-                              ),
-                              Icon(
-                                Icons.star_rounded,
-                                size: 16,
-                              ),
-                            ],
-                          ),
+                          _RatingBar(rating: 3),
                         ],
                       ),
                       SizedBox(
@@ -72,6 +48,38 @@ class ReviewListScreen extends StatelessWidget {
                 ),
               );
             }),
+      ),
+    );
+  }
+}
+
+class _RatingBar extends StatelessWidget {
+  const _RatingBar({
+    Key? key,
+    required this.rating,
+  }) : super(key: key);
+
+  final int rating;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: List.generate(
+        5,
+        (index) {
+          if (rating > index) {
+            return Icon(
+              Icons.star_rounded,
+              size: 16,
+            );
+          } else {
+            return Icon(
+              Icons.star_outline_rounded,
+              size: 16,
+            );
+          }
+        },
       ),
     );
   }
