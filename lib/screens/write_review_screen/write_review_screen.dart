@@ -1,13 +1,11 @@
+import 'package:classified_app/pallets.dart';
 import 'package:flutter/material.dart';
 
-class WriteReviewScreen extends StatefulWidget {
+import '../../widgets/widgets.dart';
+
+class WriteReviewScreen extends StatelessWidget {
   const WriteReviewScreen({Key? key}) : super(key: key);
 
-  @override
-  State<WriteReviewScreen> createState() => _WriteReviewScreenState();
-}
-
-class _WriteReviewScreenState extends State<WriteReviewScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +13,53 @@ class _WriteReviewScreenState extends State<WriteReviewScreen> {
         elevation: 0,
       ),
       body: Center(
-        child: Text("Write Your Review"),
+        child: Padding(
+          padding: EdgeInsets.all(Pallets.defaultPadding),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                "আপনার রিভিউ লিখুন",
+                style: TextStyle(fontSize: 24),
+              ),
+              SizedBox(height: 10),
+              RatingStar(),
+              Container(
+                padding: EdgeInsets.all(Pallets.defaultPadding),
+                decoration: BoxDecoration(
+                  color: Colors.grey.shade200,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: TextFormField(
+                  maxLines: 5, //or null
+                  decoration: InputDecoration.collapsed(
+                      hintText: "এখান থেকে শুরু করুন"),
+                ),
+              ),
+              SizedBox(height: 10),
+              ElevatedButton.icon(
+                style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.black),
+                  fixedSize: MaterialStateProperty.all<Size>(
+                    const Size.fromWidth(double.maxFinite),
+                  ),
+                  padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+                    const EdgeInsets.all(10),
+                  ),
+                ),
+                onPressed: () {},
+                icon: const Icon(Icons.reviews_rounded),
+                label: const Text(
+                  "সাবমিট রিভিউ",
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
